@@ -69,7 +69,7 @@ int main() {
 	// DOD
 	StartCounter();
 
-	for (int i = 0; i < ITERATION_COUNT; ++i)	{
+	for (int i = 0; i < ITERATION_COUNT; ++i) {
 		foo(a[i], b[i], c[i]);
 	}
 
@@ -79,7 +79,7 @@ int main() {
 	// OOD
 	StartCounter();
 
-	for (int i = 0; i < ITERATION_COUNT; ++i)	{
+	for (int i = 0; i < ITERATION_COUNT; ++i) {
 		o[i].foo();
 	}
 
@@ -89,7 +89,7 @@ int main() {
 	// OOD (Fragmented)
 	StartCounter();
 
-	for (int i = 0; i < ITERATION_COUNT; ++i)	{
+	for (int i = 0; i < ITERATION_COUNT; ++i) {
 		f[i].foo();
 	}
 
