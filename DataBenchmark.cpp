@@ -29,7 +29,7 @@ double GetCounter() {
 	return double(performanceCount.QuadPart - CounterStart) / PerformanceFrequency;
 }
 
-struct PerfectObject {
+struct Object {
 	int a;
 	int b;
 	int c;
@@ -55,6 +55,22 @@ struct FragmentedObject {
 	}
 };
 
+struct BaseObject {
+	char b1[64];
+	char b2[128];
+	char b3[256];
+};
+
+struct DerivedObject : BaseObject {
+	int a;
+	int b;
+	int c;
+
+	int foo() {
+		return a + b + c;
+	}
+};
+
 int foo(int a, int b, int c) {
 	return a + b + c;
 }
@@ -63,8 +79,9 @@ int main() {
 	auto a = new int[ITERATION_COUNT];
 	auto b = new int[ITERATION_COUNT];
 	auto c = new int[ITERATION_COUNT];
-	auto o = new struct PerfectObject[ITERATION_COUNT];
+	auto o = new struct Object[ITERATION_COUNT];
 	auto f = new struct FragmentedObject[ITERATION_COUNT];
+	auto d = new struct DerivedObject[ITERATION_COUNT];
 
 	// DOD
 	StartCounter();
@@ -96,9 +113,21 @@ int main() {
 	cout << GetCounter();
 	cout << " (OOD, per structure of data iterations, fragmented utilization)\n";
 
+	// OOP (Inheritance)
+
+	StartCounter();
+
+	for (int i = 0; i < ITERATION_COUNT; ++i) {
+		d[i].foo();
+	}
+
+	cout << GetCounter();
+	cout << " (OOP, per structure of data iterations, derived utilization)\n";
+
 	delete[] a;
 	delete[] b;
 	delete[] c;
 	delete[] o;
 	delete[] f;
+	delete[] d;
 }
