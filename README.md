@@ -1,8 +1,6 @@
 # DataBenchmark
 
-Compiled with `-O3 -DNDEBUG` using GCC 8.1.0. 
-
-Performance on AMD FX-4300:
+Performance on AMD FX-4300 with `-O3 -DNDEBUG` using GCC 8.1.0:
 
 | DOD    | OOD    | OOD (Fragmented) |
 |--------|--------|------------------|
