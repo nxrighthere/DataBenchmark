@@ -55,20 +55,10 @@ struct FragmentedObject {
 	}
 };
 
-struct BaseObject {
-	char b1[64];
-	char b2[128];
-	char b3[256];
-};
-
-struct DerivedObject : BaseObject {
-	int a;
-	int b;
-	int c;
-
-	int foo() {
-		return a + b + c;
-	}
+struct DerivedObject : Object {
+	char o1[64];
+	char o2[128];
+	char o3[256];
 };
 
 int foo(int a, int b, int c) {
