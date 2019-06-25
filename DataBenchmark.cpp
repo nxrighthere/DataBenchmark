@@ -114,7 +114,6 @@ int main() {
 	cout << " (OOD, per structure of data iterations, fragmented utilization)\n";
 
 	// OOP (Inheritance)
-
 	StartCounter();
 
 	for (int i = 0; i < ITERATION_COUNT; ++i) {
