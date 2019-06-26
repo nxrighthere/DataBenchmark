@@ -6,6 +6,6 @@ Performance on AMD FX-4300 with `-DNDEBUG` using GCC 8.1.0:
 |---------|---------|------------------|-------------------|
 | 107.224 | 102.277 | 2027.3           | 1850.76           |
 
-Optimized compilation `-O3` shows 0.0001 for all three paradigms except fragmented test.
+Optimized compilation `-O3` shows 0.0001 for all three paradigms except fragmented test, it remains unaffected.
 
 [DataBenchmark.exe](https://drive.google.com/open?id=1s2NZjKCtdQkIPdsHdnlU2Ta-wDtA25uG) (Windows x64)
