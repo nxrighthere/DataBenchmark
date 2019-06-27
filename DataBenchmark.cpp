@@ -80,8 +80,7 @@ int main() {
 		foo(a[i], b[i], c[i]);
 	}
 
-	cout << GetCounter();
-	cout << " (DOD, per array of data iterations, perfect utilization)\n";
+	cout << GetCounter() << " (DOD, per array of data iterations, perfect utilization)\n";
 
 	// OOD
 	StartCounter();
@@ -90,8 +89,7 @@ int main() {
 		o[i].foo();
 	}
 
-	cout << GetCounter();
-	cout << " (OOD, per structure of data iterations, perfect utilization)\n";
+	cout << GetCounter() << " (OOD, per structure of data iterations, perfect utilization)\n";
 
 	// OOD (Fragmented)
 	StartCounter();
@@ -100,8 +98,7 @@ int main() {
 		f[i].foo();
 	}
 
-	cout << GetCounter();
-	cout << " (OOD, per structure of data iterations, fragmented utilization)\n";
+	cout << GetCounter() << " (OOD, per structure of data iterations, fragmented utilization)\n";
 
 	// OOP (Inheritance)
 	StartCounter();
@@ -110,8 +107,7 @@ int main() {
 		d[i].foo();
 	}
 
-	cout << GetCounter();
-	cout << " (OOP, per structure of data iterations, derived utilization)\n";
+	cout << GetCounter() << " (OOP, per structure of data iterations, derived utilization)\n";
 
 	delete[] a;
 	delete[] b;
