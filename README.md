@@ -1,6 +1,8 @@
 # DataBenchmark
 
-AMD FX-4300 with `-DNDEBUG` using GCC 8.1.0:
+## GCC 8.1.0
+
+AMD FX-4300:
 
 | DOD     | OOD     | OOD (Fragmented) | OOP (Inheritance) |
 |---------|---------|------------------|-------------------|
