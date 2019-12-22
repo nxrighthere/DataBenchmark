@@ -1,6 +1,6 @@
 # DataBenchmark
 
-## GCC 8.1.0
+### GCC 8.1.0
 
 AMD FX-4300:
 
