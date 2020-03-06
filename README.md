@@ -23,3 +23,5 @@ Intel Core i7-4700MQ:
 Optimized compilation beyond `-O0` improves performance equally well except _OOD (Fragmented)_.
 
 [DataBenchmark.exe](https://drive.google.com/open?id=1s2NZjKCtdQkIPdsHdnlU2Ta-wDtA25uG) (Windows x64)
+
+Keep [this](https://twitter.com/xoofx/status/1235111103622979585) in your mind.
