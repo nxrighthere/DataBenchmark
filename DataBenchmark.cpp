@@ -34,7 +34,7 @@ struct Object {
 	int b;
 	int c;
 
-	int foo() {
+	int Foo() {
 		return a + b + c;
 	}
 };
@@ -48,7 +48,7 @@ struct FragmentedObject {
 	char f3[256];
 	int d;
 
-	int foo() {
+	int Foo() {
 		d = a + b + c;
 
 		return d;
@@ -61,7 +61,7 @@ struct DerivedObject : Object {
 	char o3[256];
 };
 
-int foo(int a, int b, int c) {
+int Foo(int a, int b, int c) {
 	return a + b + c;
 }
 
@@ -77,7 +77,7 @@ int main() {
 	StartCounter();
 
 	for (int i = 0; i < ITERATION_COUNT; ++i) {
-		foo(a[i], b[i], c[i]);
+		Foo(a[i], b[i], c[i]);
 	}
 
 	cout << GetCounter() << " (DOD, per array of data iterations, perfect utilization)\n";
@@ -86,7 +86,7 @@ int main() {
 	StartCounter();
 
 	for (int i = 0; i < ITERATION_COUNT; ++i) {
-		o[i].foo();
+		o[i].Foo();
 	}
 
 	cout << GetCounter() << " (OOD, per structure of data iterations, perfect utilization)\n";
@@ -95,7 +95,7 @@ int main() {
 	StartCounter();
 
 	for (int i = 0; i < ITERATION_COUNT; ++i) {
-		f[i].foo();
+		f[i].Foo();
 	}
 
 	cout << GetCounter() << " (OOD, per structure of data iterations, fragmented utilization)\n";
@@ -104,7 +104,7 @@ int main() {
 	StartCounter();
 
 	for (int i = 0; i < ITERATION_COUNT; ++i) {
-		d[i].foo();
+		d[i].Foo();
 	}
 
 	cout << GetCounter() << " (OOP, per structure of data iterations, derived utilization)\n";
