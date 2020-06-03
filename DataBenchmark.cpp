@@ -12,7 +12,7 @@ void StartCounter() {
 	LARGE_INTEGER performanceCount;
 
 	if (!QueryPerformanceFrequency(&performanceCount))
-		cout << "QueryPerformanceFrequency failed!" << std::endl;
+		cout << "QueryPerformanceFrequency failed!" << endl;
 
 	PerformanceFrequency = double(performanceCount.QuadPart) / 1000.0;
 
@@ -80,7 +80,7 @@ int main() {
 		Foo(a[i], b[i], c[i]);
 	}
 
-	cout << GetCounter() << " (DOD, per array of data iterations, perfect utilization)" << std::endl;
+	cout << GetCounter() << " (DOD, per array of data iterations, perfect utilization)" << endl;
 
 	// OOD
 	StartCounter();
@@ -89,7 +89,7 @@ int main() {
 		o[i].Foo();
 	}
 
-	cout << GetCounter() << " (OOD, per structure of data iterations, perfect utilization)" << std::endl;
+	cout << GetCounter() << " (OOD, per structure of data iterations, perfect utilization)" << endl;
 
 	// OOD (Fragmented)
 	StartCounter();
@@ -98,7 +98,7 @@ int main() {
 		f[i].Foo();
 	}
 
-	cout << GetCounter() << " (OOD, per structure of data iterations, fragmented utilization)" << std::endl;
+	cout << GetCounter() << " (OOD, per structure of data iterations, fragmented utilization)" << endl;
 
 	// OOP (Inheritance)
 	StartCounter();
@@ -107,7 +107,7 @@ int main() {
 		d[i].Foo();
 	}
 
-	cout << GetCounter() << " (OOP, per structure of data iterations, derived utilization)" << std::endl;
+	cout << GetCounter() << " (OOP, per structure of data iterations, derived utilization)" << endl;
 
 	delete[] a;
 	delete[] b;
